@@ -1,9 +1,9 @@
 
 # Terraform + Ansible NGINX Deployment (AWS)
 
-## Overview
-This project demonstrates provisioning AWS EC2 instances using Terraform and
-automating web server configuration using Ansible.
+## 📌 Overview
+This project demonstrates infrastructure provisioning with Terraform and configuration management using Ansible. Terraform provisions an EC2 instance, and Ansible installs and configures NGINX on the server.
+
 
 ## Architecture
 - Terraform provisions EC2 instances
@@ -20,17 +20,11 @@ automating web server configuration using Ansible.
 - SSH
 - Bash
 
-## Screenshots
+## 🧪 Commands Executed
 
-### EC2 Instances Running
-![EC2 Instances](screenshots/ec2-instances.png)
+```bash
+terraform init
+terraform apply
 
-### Ansible Playbook Execution
-![Ansible Run](screenshots/ansible-playbook-run.png)
-
-### NGINX Service Running
-![NGINX Status](screenshots/nginx-running.png)
-
-### NGINX Accessible in Browser
-![NGINX Browser](screenshots/browser-nginx.png)
+ansible-playbook -i inventory nginx.yml
 
